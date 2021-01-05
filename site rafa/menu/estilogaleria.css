@@ -1,0 +1,257 @@
+
+@charset"UTF-8";
+body{
+    width: 100vw; /*view width ou heigth preenche a tela toda */ 
+    height: 100vh;
+    background-image: url(imagens/fundodesfocado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+
+}
+
+ul#album-fotos {
+	width: 700px;
+	margin: 0 auto;
+	padding: 50px;
+	overflow: hidden;
+	list-style: none;
+
+}
+
+
+ul#album-fotos li {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	border: 1px solid white;
+	background-color: #ffffff;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0,.4);
+	transition: all 0.4s ease-in;
+
+}
+
+ul#album-fotos li span {
+	opacity: 0;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	background-color: rgba(0, 0, 0,.3);
+	font-size: 9pt;
+	line-height: 370px;
+	padding: 5px;
+
+}
+ul#album-fotos li:hover span {
+	opacity: 1;
+
+}
+
+ul#album-fotos li:hover{
+	transform: scale(1.5);
+
+}
+
+ul#album-fotos li#foto01{
+	background: url(\imagens/moscow\ mule.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color:#ffffff;
+}
+
+ul#album-fotos li#foto01:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto02:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+ul#album-fotos li#foto03:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto04:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto05:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto06:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto02{
+	background: url('\imagens/Gin\ Tônica\ com\ Gin\ Gordons\,\ melaço\,\ Tônica\ Schweppes\,\ suco\ de\ limão\ siciliano\,\ fina\ fatia\ de\ pepino\ e\ zimbro.jfif') no-repeat;
+	background-position: 15% 50%;
+	background-size:300px 300px;
+	background-color: #ffffff;	
+}
+
+
+ul#album-fotos li#foto03{
+	background: url('\imagens/Red\ Lady.jfif') no-repeat;
+	background-position: 05% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;	
+}
+
+
+ul#album-fotos li#foto04{
+	background: url('\imagens/Aperol\ e\ gin.jpg') no-repeat;
+	background-position: 98% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;	
+}
+
+
+ul#album-fotos li#foto05{
+	background: url('\imagens/Mojito\ BlackBerry.jpg') no-repeat;
+	background-position: 70% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;	
+}
+
+
+ul#album-fotos li#foto06{
+    background: url('\imagens/G&T\ HELLO\ SPRING.jfif') no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+    background-color: #ffffff;	
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color:#222 ;
+    font-family: Arial;
+}
+.menu ul{
+    list-style: none;
+    position:relative;
+}
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+}
+
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+
+}
+
+.menu a:hover{
+    background-color: #f4f4f4;
+    color: #555;
+
+}
+
+.menu ul ul li{
+    float: none;
+    border-bottom: solid 1px #ccc;
+}
+
+.menu ul ul li a{
+    background-color: #5c0403;
+}
+
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color: #222;
+    color: #ffffff;
+    font-family: arial;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+#bt_menu{
+    display: none;
+}
+
+label[for="bt_menu"]{
+    display: none;
+}
+
+@media(max-width: 800px){
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+    
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+
+    }
+}
